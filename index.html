@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <title>Atom Infinitum</title>
+    </head>
+
+    <body>
+        <span id="notice">
+            <p class="notxt">This game is currently in an alpha phase.</p>
+        </span>
+        <br>
+        <span id="currencies">
+            <p class="notxt">You have <span id="atcount">0</span> atoms.</p>
+            <p class="snotxt" style="opacity: 50%">You are gaining <span id="atcountps">0</span> or <span id="atpps">0.00</span>%/s atoms per second.</p>
+        </span>
+        <br>
+        <div class="tabButtons">
+            <button class="tabBtn" onclick="changeTab('atomizers')">Atomizers</button>
+            <button class="tabBtn" onclick="changeTab('options')">Options</button>
+            <button class="tabBtn" onclick="changeTab('statistics')">Statistics</button>
+        </div>
+        <br>
+        <div id="atomizersTab" style="font-family: Inconsolata; font-size: 22.5px; color: white;">
+            <div id="atomizer1" style="display: block;">
+                <table style="width: 100%; margin: auto;">
+                    
+                    <tbody><tr style="border-color: white; border-width: 2px; border-radius: 2px;">
+                        <td style="width: 35%;">1st Atomizer <span id="at1mlt" style="color: rgb(90, 247, 98); text-shadow: 0px 0px 5px rgb(90, 247, 98)">x3.058</span></td>
+                        <td style="width: 35%;"><span id="at1amt">30.546</span> [<span id="at1bght">1</span>] <span id="at1pps" style="opacity: 50%;"><small>(+0.00%/s)</small></span></td>
+                        <td style="width: 10%"><button class="unbuyableThing" id="buyAzr1" onclick="buyAt(1)"><span id="at1cost">1.000e3</span> atoms</button></td>
+                    </tr>
+                </tbody></table>
+            </div>
+            <div id="atomizer2" style="display: block;">
+                <table style="width: 100%; margin: auto;">
+                    
+                    <tbody><tr style="border-color: white; border-width: 2px; border-radius: 2px;">
+                        <td style="width: 35%;">2nd Atomizer <span id="at2mlt" style="color: rgb(90, 247, 98); text-shadow: 0px 0px 5px rgb(90, 247, 98)">x3.058</span></td>
+                        <td style="width: 35%;"><span id="at2amt">30.546</span> [<span id="at2bght">1</span>] <span id="at2pps" style="opacity: 50%;"><small>(+0.00%/s)</small></span></td>
+                        <td style="width: 10%"><button class="unbuyableThing" id="buyAzr2" onclick="buyAt(2)"><span id="at2cost">1.000e3</span> atoms</button></td>
+                    </tr>
+                </tbody></table>
+            </div>
+            <div id="atomizer3" style="display: block;">
+                <table style="width: 100%; margin: auto;">
+                    
+                    <tbody><tr style="border-color: white; border-width: 2px; border-radius: 2px;">
+                        <td style="width: 35%;">3rd Atomizer <span id="at3mlt" style="color: rgb(90, 247, 98); text-shadow: 0px 0px 5px rgb(90, 247, 98)">x3.058</span></td>
+                        <td style="width: 35%;"><span id="at3amt">30.546</span> [<span id="at3bght">1</span>] <span id="at3pps" style="opacity: 50%;"><small>(+0.00%/s)</small></span></td>
+                        <td style="width: 10%"><button class="unbuyableThing" id="buyAzr3" onclick="buyAt(3)"><span id="at3cost">1.000e3</span> atoms</button></td>
+                    </tr>
+                </tbody></table>
+            </div>
+            <div id="atomizer4" style="display: block;">
+                <table style="width: 100%; margin: auto;">
+                    
+                    <tbody><tr style="border-color: white; border-width: 2px; border-radius: 2px;">
+                        <td style="width: 35%;">4th Atomizer <span id="at4mlt" style="color: rgb(90, 247, 98); text-shadow: 0px 0px 5px rgb(90, 247, 98)">x3.058</span></td>
+                        <td style="width: 35%;"><span id="at4amt">30.546</span> [<span id="at4bght">1</span>] <span id="at4pps" style="opacity: 50%;"><small>(+0.00%/s)</small></span></td>
+                        <td style="width: 10%"><button class="unbuyableThing" id="buyAzr4" onclick="buyAt(4)"><span id="at4cost">1.000e3</span> atoms</button></td>
+                    </tr>
+                </tbody></table>
+            </div>
+        </div>
+
+        <div id="statisticsTab" style="display: none;">
+            <p class="notxt">Your all-time atoms is <span id="atatcount">0.00</span>.</p>
+            <p class="notxt">Your best atoms is <span id="bsatcount">0.00.</p>
+        </div>
+
+        <div id="optionsTab" style="display: none;">
+            <div id="optBtns" style="text-align: center;">
+                <button class="opBtn" onclick="exportSave()">Export</button>
+                <button class="opBtn" onclick="importSave()">Import</button>
+            </div>
+            <br>
+            <p id="saveAlert" style="transform: skewX(-3deg); font-family: Inconsolata; opacity: 50%;">Please export your save every time you leave this game. Saving will definitely be added in the next update.</p>
+            <div class="links" style="text-align: center;">
+                <a href="others/changelog/changelog.html" target="_blank">Changelog</a>
+                <a href="others/credits/credits.html" target="_blank">Credits</a>
+                <a href="others/how-to-play/htp.html" target="_blank">How to play</a>
+            </div>
+        </div>
+        
+        <script src="js/lib/ExpantaNum.js"></script>
+
+        <script src="js/main/game.js"></script>
+        <script src="js/main/save.js"></script>
+        <script src="js/main/variables.js"></script>
+    </body>
+</html>
